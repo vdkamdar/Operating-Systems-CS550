@@ -1,0 +1,11 @@
+make
+
+sudo insmod jprobe.ko process_id=<id>
+
+gcc user_program.c -o user_program
+
+sudo ./user_program
+
+sudo rmmod jprobe
+
+make clean
